@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Events — ALP Astrology</title>
+<meta name="description" content="Special classes, spiritual rituals and learning sessions: Foundation Level Class, Suyamvara Kalaparvathi Homam and ALP Vastu interactive training.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://www.alpastrology.org">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .event{ display:grid; grid-template-columns:120px 1fr auto; gap:var(--sp-5); align-items:center;
+    background:#fff; border:1px solid var(--border); border-radius:var(--r-lg); padding:var(--sp-5);
+    box-shadow:var(--shadow-xs); transition:.2s; }
+  .event:hover{ box-shadow:var(--shadow-md); border-color:var(--border-strong); transform:translateY(-3px); }
+  .ev-date{ text-align:center; background:var(--gold-tint); border:1px solid var(--border-strong);
+    border-radius:var(--r-md); padding:var(--sp-4) var(--sp-3); }
+  .ev-date .m{ font-size:.78rem; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:var(--saffron-deep); }
+  .ev-date .d{ font-family:var(--font-display); font-size:2.2rem; color:var(--ink); line-height:1; }
+  .ev-body h3{ font-size:1.3rem; }
+  .ev-body p{ color:var(--fg2); font-size:.95rem; margin-top:.3em; }
+  .ev-meta{ display:flex; gap:1.2em; flex-wrap:wrap; margin-top:.6em; font-size:.84rem; color:var(--fg3); }
+  .ev-meta span{ display:inline-flex; align-items:center; gap:.4em; }
+  @media (max-width:760px){ .event{ grid-template-columns:84px 1fr; } .event .btn{ grid-column:1 / -1; justify-content:center; } }
+</style>
+</head>
+<body data-page="events" data-banner="aquarius">
+
+<section class="page-hero" data-screen-label="Events hero">
+  <div class="stars" data-n="50"></div>
+  <div class="wrap">
+    <span class="eyebrow">Events</span>
+    <h1 class="mt-3">Astrological Events &amp; Spiritual Sessions</h1>
+    <p class="lead mt-4">Join our special classes, spiritual rituals and learning sessions designed to enhance your understanding of astrology, energy balance and life transformation.</p>
+    <div class="crumbs"><a href="index.html">Home</a> &nbsp;/&nbsp; Events</div>
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="wrap" style="display:flex;flex-direction:column;gap:var(--sp-5)">
+    <div class="event reveal">
+      <div class="ev-date"><div class="m">Live</div><div class="d">L1</div></div>
+      <div class="ev-body">
+        <span class="pill">Foundation</span>
+        <h3 class="mt-3">ALP Astrology — Foundation Level Class</h3>
+        <p>An accessible entry point into astrology — learn the core building blocks of chart reading in a guided group session.</p>
+        <div class="ev-meta"><span>✦ Beginner friendly</span><span>✦ Online &amp; in-person</span></div>
+      </div>
+      <a class="btn btn-primary" href="contact.html">Register</a>
+    </div>
+    <div class="event reveal">
+      <div class="ev-date"><div class="m">Ritual</div><div class="d">✦</div></div>
+      <div class="ev-body">
+        <span class="pill">Homam</span>
+        <h3 class="mt-3">Suyamvara Kalaparvathi Homam</h3>
+        <p>A sacred prosperity &amp; harmony ritual to remove obstacles in marriage and relationships and invite auspicious energy.</p>
+        <div class="ev-meta"><span>✦ Prosperity &amp; Harmony</span><span>✦ Guided by experts</span></div>
+      </div>
+      <a class="btn btn-primary" href="contact.html">Register</a>
+    </div>
+    <div class="event reveal">
+      <div class="ev-date"><div class="m">Train</div><div class="d">V</div></div>
+      <div class="ev-body">
+        <span class="pill">Vastu</span>
+        <h3 class="mt-3">ALP Vastu — Direct Interactive Training</h3>
+        <p>A hands-on, interactive session on Vastu principles for balancing the energy of your home and workplace.</p>
+        <div class="ev-meta"><span>✦ Interactive</span><span>✦ Practical Q&amp;A</span></div>
+      </div>
+      <a class="btn btn-primary" href="contact.html">Register</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad" style="background:var(--bg-cream)">
+  <div class="wrap two-col">
+    <div class="media ph reveal">
+      <span class="ph-glyph">✦</span>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Stay Updated</span>
+      <h2 class="mt-3">Never miss a session</h2>
+      <p class="lead mt-4">Our calendar of classes, homams and Vastu workshops updates regularly. Reach out to reserve your place or ask about upcoming dates.</p>
+      <a class="btn btn-red mt-6" href="https://wa.me/919786556156" target="_blank" rel="noopener">Ask About Dates</a>
+    </div>
+  </div>
+</section>
+
+<script src="site.js"></script>
+</body>
+</html>

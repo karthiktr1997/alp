@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Horoscope &amp; Zodiac Signs — ALP Astrology</title>
+<meta name="description" content="Explore all 12 zodiac signs — dates, ruling planets, elements and traits. Find your sign and discover personalized astrological guidance from ALP Astrology.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .z-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:var(--sp-5); }
+  @media (max-width:900px){ .z-grid{ grid-template-columns:repeat(3,1fr); } }
+  @media (max-width:620px){ .z-grid{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:400px){ .z-grid{ grid-template-columns:1fr; } }
+  .z-card{ background:#fff; border:1px solid var(--border); border-radius:var(--r-lg); padding:var(--sp-6) var(--sp-5);
+    text-align:center; display:flex; flex-direction:column; align-items:center; gap:.25em;
+    box-shadow:var(--shadow-xs); transition:.22s cubic-bezier(.2,.7,.2,1); position:relative; overflow:hidden; }
+  .z-card::before{ content:""; position:absolute; inset:0 0 auto 0; height:4px; background:var(--grad-gold); opacity:0; transition:.22s; }
+  .z-card:hover{ transform:translateY(-5px); box-shadow:var(--shadow-lg); border-color:var(--border-strong); }
+  .z-card:hover::before{ opacity:1; }
+  .z-g{ font-family:'Cormorant Garamond',serif; font-size:2.8rem; line-height:1; color:var(--saffron-deep);
+    width:74px; height:74px; display:grid; place-items:center; border-radius:50%;
+    background:var(--gold-tint); border:1px solid var(--border-strong); margin-bottom:.3em; }
+  .z-card b{ font-family:var(--font-display); font-weight:700; font-size:1.2rem; color:var(--ink); }
+  .z-d{ font-size:.82rem; color:var(--fg2); }
+  .z-p{ font-size:.74rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--saffron-deep); margin-top:.3em; }
+</style>
+</head>
+<body data-page="horoscope">
+
+<section class="page-hero" data-screen-label="Horoscope hero">
+  <div class="wrap">
+    <span class="eyebrow" style="color:var(--cos-gold)">Horoscope</span>
+    <h1 class="mt-3">The Twelve Zodiac Signs</h1>
+    <p class="lead mt-4">Every sign carries its own planet, element and story. Find yours below to explore its traits — then go deeper with a personal reading of your complete birth chart.</p>
+    <div class="crumbs"><a href="index.html">Home</a> &nbsp;/&nbsp; Horoscope</div>
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="wrap">
+    <div class="z-grid">
+      <a class="z-card reveal" href="zodiac-aries.html" data-sign="aries">
+        <span class="z-g">♈︎</span>
+        <b>Aries</b>
+        <span class="z-d">Mar 21 – Apr 19</span>
+        <span class="z-p">Mars</span>
+      </a>
+      <a class="z-card reveal" href="zodiac-taurus.html" data-sign="taurus">
+        <span class="z-g">♉︎</span>
+        <b>Taurus</b>
+        <span class="z-d">Apr 20 – May 20</span>
+        <span class="z-p">Venus</span>
+      </a>
+      <a class="z-card reveal" href="zodiac-gemini.html" data-sign="gemini">
+        <span class="z-g">♊︎</span>
+        <b>Gemini</b>
+        <span class="z-d">May 21 – Jun 20</span>
+        <span class="z-p">Mercury</span>
+      </a>
+      <a class="z-card reveal" href="zodiac-cancer.html" data-sign="cancer">
+        <span class="z-g">♋︎</span>
+        <b>Cancer</b>
+        <span class="z-d">Jun 21 – Jul 22</span>
+        <span class="z-p">Moon</span>
+      </a>
+      <a class="z-card reveal" href="zodiac-leo.html" data-sign="leo">
+        <span class="z-g">♌︎</span>
+        <b>Leo</b>
+        <span class="z-d">Jul 23 – Aug 22</span>
+        <span class="z-p">Sun</span>
+      </a>
+      <a class="z-card reveal" href="zodiac-virgo.html" data-sign="virgo">
+        <span class="z-g">♍︎</span>
+        <b>Virgo</b>
+        <span class="z-d">Aug 23 – Sep 22</span>
+        <span class="z-p">Mercury</span>
+      </a>
+      <a class="z-card reveal" href="zodiac-libra.html" data-sign="libra">
+        <span class="z-g">♎︎</span>
+        <b>Libra</b>
+        <span class="z-d">Sep 23 – Oct 22</span>
+        <span class="z-p">Venus</span>
+      </a>
+      <a class="z-card reveal" href="zodiac-scorpio.html" data-sign="scorpio">
+        <span class="z-g">♏︎</span>
+        <b>Scorpio</b>
+        <span class="z-d">Oct 23 – Nov 21</span>
+        <span class="z-p">Mars / Pluto</span>
+      </a>
+      <a class="z-card reveal" href="zodiac-sagittarius.html" data-sign="sagittarius">
+        <span class="z-g">♐︎</span>
+        <b>Sagittarius</b>
+        <span class="z-d">Nov 22 – Dec 21</span>
+        <span class="z-p">Jupiter</span>
+      </a>
+      <a class="z-card reveal" href="zodiac-capricorn.html" data-sign="capricorn">
+        <span class="z-g">♑︎</span>
+        <b>Capricorn</b>
+        <span class="z-d">Dec 22 – Jan 19</span>
+        <span class="z-p">Saturn</span>
+      </a>
+      <a class="z-card reveal" href="zodiac-aquarius.html" data-sign="aquarius">
+        <span class="z-g">♒︎</span>
+        <b>Aquarius</b>
+        <span class="z-d">Jan 20 – Feb 18</span>
+        <span class="z-p">Uranus / Saturn</span>
+      </a>
+      <a class="z-card reveal" href="zodiac-pisces.html" data-sign="pisces">
+        <span class="z-g">♓︎</span>
+        <b>Pisces</b>
+        <span class="z-d">Feb 19 – Mar 20</span>
+        <span class="z-p">Neptune / Jupiter</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad" style="background:var(--bg-cream)">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <div style="position:relative;z-index:1">
+        <h2>Your stars are personal</h2>
+        <p class="lead mt-3">Sun signs are only the surface. Book a one-to-one consultation for guidance drawn from your full birth chart.</p>
+        <a class="btn btn-primary btn-lg mt-5" href="consultation.html">Book a Consultation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="site.js"></script>
+</body>
+</html>

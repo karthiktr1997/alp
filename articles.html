@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Articles &amp; Blog — ALP Astrology</title>
+<meta name="description" content="Detailed write-ups on foundational astrology, advanced prediction methods and deep cosmic insights.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://www.alpastrology.org">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .art-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:var(--sp-5); }
+  @media (max-width:760px){ .art-grid{ grid-template-columns:1fr; } }
+  .art{ background:#fff; border:1px solid var(--border); border-radius:var(--r-lg); overflow:hidden;
+    display:flex; flex-direction:column; box-shadow:var(--shadow-xs); transition:.22s cubic-bezier(.2,.7,.2,1); }
+  .art:hover{ transform:translateY(-4px); box-shadow:var(--shadow-md); border-color:var(--border-strong); }
+  .art-thumb{ aspect-ratio:16/9; background:var(--grad-sun); display:grid; place-items:center; color:#fff; position:relative; }
+  .art-thumb .ph-glyph{ display:block; font-size:2.6rem; animation:floaty 7s ease-in-out infinite; }
+  @media (prefers-reduced-motion:reduce){ .art-thumb .ph-glyph{ animation:none; } }
+  .art-body{ padding:var(--sp-5) var(--sp-6) var(--sp-6); display:flex; flex-direction:column; flex:1; }
+  .art-body h3{ font-size:1.25rem; margin-top:.3em; }
+  .art-body p{ color:var(--fg2); font-size:.94rem; margin-top:.5em; }
+  .art-body .rl{ margin-top:auto; padding-top:var(--sp-4); color:var(--saffron-deep); font-weight:700; font-size:.9rem; }
+</style>
+</head>
+<body data-page="articles" data-banner="virgo">
+
+<section class="page-hero" data-screen-label="Articles hero">
+  <div class="stars" data-n="50"></div>
+  <div class="wrap">
+    <span class="eyebrow">Articles &amp; Blog</span>
+    <h1 class="mt-3">Insightful Articles &amp; Blog</h1>
+    <p class="lead mt-4">Dive into our curated collection of detailed write-ups exploring foundational astrology, advanced prediction methods and deep cosmic insights to enrich your spiritual journey.</p>
+    <div class="crumbs"><a href="index.html">Home</a> &nbsp;/&nbsp; Articles</div>
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="wrap art-grid">
+    <article class="art reveal">
+      <div class="art-thumb"><span class="ph-glyph">✦</span></div>
+      <div class="art-body"><span class="pill">Foundations</span><h3>Decoding Your Birth Horoscope</h3><p>A clear, step-by-step guide to reading your natal chart — houses, signs and planetary placements explained simply.</p><span class="rl">Read Article →</span></div>
+    </article>
+    <article class="art reveal">
+      <div class="art-thumb"><span class="ph-glyph">✦</span></div>
+      <div class="art-body"><span class="pill">Prediction</span><h3>How Planetary Movements Shape Your Life</h3><p>Understand transits and dashas — how the moving planets activate different chapters of your life.</p><span class="rl">Read Article →</span></div>
+    </article>
+    <article class="art reveal">
+      <div class="art-thumb"><span class="ph-glyph">✦</span></div>
+      <div class="art-body"><span class="pill">Zodiac</span><h3>Zodiac Signs &amp; Their Unique Characteristics</h3><p>The strengths, tendencies and gifts of each sign — and how they colour your personality and choices.</p><span class="rl">Read Article →</span></div>
+    </article>
+    <article class="art reveal">
+      <div class="art-thumb"><span class="ph-glyph">✦</span></div>
+      <div class="art-body"><span class="pill">Remedies</span><h3>Powerful Astrological Remedies &amp; Rituals</h3><p>Time-honoured remedial practices to balance challenging planetary influences and restore harmony.</p><span class="rl">Read Article →</span></div>
+    </article>
+  </div>
+  <div class="wrap mt-7" style="display:flex;justify-content:center">
+    <div class="two-col" style="max-width:980px;width:100%">
+      <div class="media ph reveal">
+        <span class="ph-glyph">✦</span>
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">Keep Learning</span>
+        <h2 class="mt-3">Fresh insight, regularly</h2>
+        <p class="lead mt-4">New articles are added often, covering everything from beginner basics to advanced predictive method. Subscribe to our newsletter to get them in your inbox.</p>
+        <a class="btn btn-primary mt-6" href="contact.html">Subscribe for Updates</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="site.js"></script>
+</body>
+</html>

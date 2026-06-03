@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FAQ — ALP Astrology</title>
+<meta name="description" content="Frequently asked questions about ALP Astrology consultations, courses, birth charts, remedies and how to get started.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://www.alpastrology.org">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .faq-wrap{ max-width:820px; margin-inline:auto; display:flex; flex-direction:column; gap:var(--sp-3); }
+  .faq{ background:#fff; border:1px solid var(--border); border-radius:var(--r-md); overflow:hidden; transition:.2s; }
+  .faq.open{ border-color:var(--border-strong); box-shadow:var(--shadow-md); }
+  .faq summary{ list-style:none; cursor:pointer; padding:var(--sp-5) var(--sp-6); display:flex; align-items:center;
+    justify-content:space-between; gap:1em; font-family:var(--font-display); font-size:1.18rem; color:var(--ink); }
+  .faq summary::-webkit-details-marker{ display:none; }
+  .faq summary .pm{ flex:none; width:32px; height:32px; border-radius:50%; background:var(--gold-tint);
+    color:var(--saffron-deep); display:grid; place-items:center; border:1px solid var(--border-strong); transition:.22s; font-size:1.2rem; }
+  .faq[open] summary .pm{ background:var(--grad-gold); color:#fff; transform:rotate(135deg); }
+  .faq .ans{ padding:0 var(--sp-6) var(--sp-5); color:var(--fg2); }
+  .faq .ans p{ margin-top:.2em; }
+</style>
+</head>
+<body data-page="faq" data-banner="capricorn">
+
+<section class="page-hero" data-screen-label="FAQ hero">
+  <div class="stars" data-n="50"></div>
+  <div class="wrap">
+    <span class="eyebrow">Frequently Asked Questions</span>
+    <h1 class="mt-3">Your Questions, Answered</h1>
+    <p class="lead mt-4">Everything you need to know about our consultations, courses and how astrology can guide your journey.</p>
+    <div class="crumbs"><a href="index.html">Home</a> &nbsp;/&nbsp; FAQ</div>
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="wrap faq-wrap">
+    <details class="faq" open>
+      <summary>What information do I need to provide for a consultation? <span class="pm">+</span></summary>
+      <div class="ans"><p>To cast an accurate birth chart we need your <strong>date of birth, exact time of birth and place of birth</strong>. The more precise the birth time, the more detailed and accurate your reading will be.</p></div>
+    </details>
+    <details class="faq">
+      <summary>Do you offer online consultations? <span class="pm">+</span></summary>
+      <div class="ans"><p>Yes. Consultations are available both <strong>online (video / phone)</strong> and in person at our Chennai office. You can book whichever is most convenient — simply message us on WhatsApp to arrange a time.</p></div>
+    </details>
+    <details class="faq">
+      <summary>I'm a complete beginner — can I still join a course? <span class="pm">+</span></summary>
+      <div class="ans"><p>Absolutely. Our <strong>Basic ALP Astrology Training Course</strong> assumes no prior knowledge and starts from the very foundations. Many of our students began with zero background and now confidently read charts for family and friends.</p></div>
+    </details>
+    <details class="faq">
+      <summary>What types of guidance can a reading cover? <span class="pm">+</span></summary>
+      <div class="ans"><p>Personal birth-chart insights, career &amp; financial growth, marriage &amp; relationship compatibility, and health &amp; life-path healing solutions. Every reading is tailored to the questions that matter most to you.</p></div>
+    </details>
+    <details class="faq">
+      <summary>Are the remedies you suggest difficult to follow? <span class="pm">+</span></summary>
+      <div class="ans"><p>Not at all. Our remedies are practical and respectful of your lifestyle — simple rituals, timing guidance and positive practices. We never use fear; we explain the <em>why</em> behind every suggestion.</p></div>
+    </details>
+    <details class="faq">
+      <summary>Which astrology systems do you practise? <span class="pm">+</span></summary>
+      <div class="ans"><p>We work primarily with <strong>traditional Vedic astrology and KP (Krishnamurti Paddhati)</strong>, combined with modern psychological interpretation for clear, actionable guidance.</p></div>
+    </details>
+    <details class="faq">
+      <summary>How do I book a consultation or enrol in a course? <span class="pm">+</span></summary>
+      <div class="ans"><p>The fastest way is to <strong>message us on WhatsApp at +91 9786556156</strong> or use the contact form. We'll guide you through the next steps and answer any questions.</p></div>
+    </details>
+    <details class="faq">
+      <summary>Is my information kept confidential? <span class="pm">+</span></summary>
+      <div class="ans"><p>Always. Every reading is a private, judgement-free conversation. Your personal details and the topics you discuss are kept strictly confidential.</p></div>
+    </details>
+  </div>
+
+  <div class="wrap mt-7" style="max-width:820px">
+    <div class="cta-band reveal"><div class="stars" data-n="30"></div>
+      <div style="position:relative;z-index:1">
+        <h2>Still have a question?</h2>
+        <p class="lead mt-3">We're happy to help — reach out and we'll get back to you personally.</p>
+        <a class="btn btn-primary btn-lg mt-5" href="contact.html">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  /* single-open accordion + .open class for styling */
+  document.querySelectorAll('.faq').forEach(d=>{
+    d.addEventListener('toggle', ()=>{
+      d.classList.toggle('open', d.open);
+      if(d.open) document.querySelectorAll('.faq[open]').forEach(o=>{ if(o!==d){ o.open=false; o.classList.remove('open'); } });
+    });
+    if(d.open) d.classList.add('open');
+  });
+</script>
+<script src="site.js"></script>
+</body>
+</html>

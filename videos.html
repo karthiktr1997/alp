@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Video Tutorials &amp; Lectures — ALP Astrology</title>
+<meta name="description" content="Exclusive video collection: guided learning, daily tips, weekly predictions, monthly outlook and interactive expert discussions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://www.alpastrology.org">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .vid-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:var(--sp-5); }
+  @media (max-width:900px){ .vid-grid{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:600px){ .vid-grid{ grid-template-columns:1fr; } }
+  .vid{ background:#fff; border:1px solid var(--border); border-radius:var(--r-lg); overflow:hidden;
+    box-shadow:var(--shadow-xs); transition:.22s cubic-bezier(.2,.7,.2,1); }
+  .vid:hover{ transform:translateY(-4px); box-shadow:var(--shadow-md); border-color:var(--border-strong); }
+  .vid-thumb{ aspect-ratio:16/9; background:var(--grad-night); position:relative; display:grid; place-items:center; overflow:hidden; }
+  .vid-thumb .stars{ opacity:.8; }
+  .play{ width:60px; height:60px; border-radius:50%; background:rgba(255,255,255,.92); display:grid; place-items:center;
+    box-shadow:var(--shadow-gold); position:relative; z-index:1; transition:.2s; }
+  .vid:hover .play{ transform:scale(1.1); background:#fff; }
+  .play svg{ width:24px; height:24px; color:var(--red); margin-left:3px; }
+  .vid-body{ padding:var(--sp-5); }
+  .vid-body h3{ font-size:1.1rem; }
+  .vid-body p{ color:var(--fg2); font-size:.9rem; margin-top:.35em; }
+</style>
+</head>
+<body data-page="videos" data-banner="pisces">
+
+<section class="page-hero" data-screen-label="Videos hero">
+  <div class="stars" data-n="50"></div>
+  <div class="wrap">
+    <span class="eyebrow">Videos</span>
+    <h1 class="mt-3">Video Tutorials &amp; Lectures</h1>
+    <p class="lead mt-4">Explore our exclusive video collection where seasoned astrologers share their wisdom through practical teachings, predictive insights and easy-to-follow guidance for every learner.</p>
+    <div class="crumbs"><a href="index.html">Home</a> &nbsp;/&nbsp; Videos</div>
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="wrap two-col" style="margin-bottom:var(--sp-8)">
+    <div class="media reveal" style="aspect-ratio:16/9">
+      <div style="position:absolute;inset:0;background:var(--grad-night)"><div class="stars" data-n="40"></div></div>
+      <div style="position:absolute;inset:0;display:grid;place-items:center">
+        <span class="play" style="width:74px;height:74px"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+      </div>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Featured</span>
+      <h2 class="mt-3">Astrology, made watchable</h2>
+      <p class="lead mt-4">Learn at your own pace with clear, on-camera teaching — from your very first chart to advanced predictive method.</p>
+      <a class="btn btn-red mt-6" href="https://wa.me/919786556156" target="_blank" rel="noopener">Watch on YouTube</a>
+    </div>
+  </div>
+
+  <div class="vid-grid">
+    <div class="vid reveal"><div class="vid-thumb"><div class="stars" data-n="20"></div><span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div><div class="vid-body"><span class="pill">Learn</span><h3 class="mt-3">Guided Astrology Learning</h3><p>Structured lessons that take you from basics to confident chart reading.</p></div></div>
+    <div class="vid reveal"><div class="vid-thumb"><div class="stars" data-n="20"></div><span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div><div class="vid-body"><span class="pill">Daily</span><h3 class="mt-3">Daily &amp; Practical Tips</h3><p>Bite-sized, practical astrology you can apply to everyday life.</p></div></div>
+    <div class="vid reveal"><div class="vid-thumb"><div class="stars" data-n="20"></div><span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div><div class="vid-body"><span class="pill">Weekly</span><h3 class="mt-3">Weekly Predictions</h3><p>Insightful weekly forecasts to help you plan ahead with confidence.</p></div></div>
+    <div class="vid reveal"><div class="vid-thumb"><div class="stars" data-n="20"></div><span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div><div class="vid-body"><span class="pill">Monthly</span><h3 class="mt-3">Monthly Outlook</h3><p>A broad astrological view of the month ahead for every sign.</p></div></div>
+    <div class="vid reveal"><div class="vid-thumb"><div class="stars" data-n="20"></div><span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div><div class="vid-body"><span class="pill">Live</span><h3 class="mt-3">Interactive Discussions</h3><p>Expert-led Q&amp;A sessions where your questions get real answers.</p></div></div>
+    <div class="vid reveal"><div class="vid-thumb"><div class="stars" data-n="20"></div>
+        <span class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+      </div><div class="vid-body"><span class="pill">Lecture</span><h3 class="mt-3">Expert Lectures</h3><p>In-depth teaching sessions from experienced ALP astrologers.</p></div></div>
+  </div>
+</section>
+
+<script src="site.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Courses — ALP Astrology</title>
+<meta name="description" content="Structured ALP Astrology training: Basic, Advanced and Master's courses covering Vedic & KP astrology, chart interpretation and prediction.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://www.alpastrology.org">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .price-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:var(--sp-5); align-items:stretch; }
+  @media (max-width:920px){ .price-grid{ grid-template-columns:1fr; max-width:480px; margin-inline:auto; } }
+  .course-card{ background:#fff; border:1px solid var(--border); border-radius:var(--r-lg); overflow:hidden;
+    display:flex; flex-direction:column; box-shadow:var(--shadow-sm); transition:.22s cubic-bezier(.2,.7,.2,1); }
+  .course-card:hover{ transform:translateY(-5px); box-shadow:var(--shadow-lg); border-color:var(--border-strong); }
+  .course-card.feature{ border:2px solid var(--saffron); }
+  .cc-top{ padding:var(--sp-6); background:var(--gold-tint); border-bottom:1px solid var(--border); position:relative; }
+  .course-card.feature .cc-top{ background:var(--grad-gold); color:#fff; }
+  .cc-top .lvl{ font-size:.75rem; font-weight:800; letter-spacing:.16em; text-transform:uppercase; }
+  .course-card.feature .cc-top .lvl{ color:#fff; }
+  .cc-top h3{ margin-top:.3em; }
+  .course-card.feature .cc-top h3{ color:#fff; }
+  .cc-tag{ position:absolute; top:16px; right:16px; background:var(--red); color:#fff; font-size:.7rem; font-weight:800;
+    letter-spacing:.1em; padding:.35em .8em; border-radius:var(--r-pill); }
+  .cc-body{ padding:var(--sp-6); display:flex; flex-direction:column; flex:1; }
+  .cc-body .btn{ margin-top:auto; }
+</style>
+</head>
+<body data-page="courses" data-banner="gemini">
+
+<section class="page-hero" data-screen-label="Courses hero">
+  <div class="stars" data-n="50"></div>
+  <div class="wrap">
+    <span class="eyebrow">Courses</span>
+    <h1 class="mt-3">Learn Astrology from the Experts</h1>
+    <p class="lead mt-4">Structured, easy-to-understand training for beginners, advancing learners and aspiring professionals — build strong foundations, deepen your knowledge and master advanced predictive techniques.</p>
+    <div class="crumbs"><a href="index.html">Home</a> &nbsp;/&nbsp; Courses</div>
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="wrap">
+    <div class="price-grid">
+      <div class="course-card reveal">
+        <div class="cc-top"><span class="lvl">Level 1</span><h3>Basic ALP Astrology Training</h3></div>
+        <div class="cc-body">
+          <p style="color:var(--fg2)">Your first step into astrology. Understand the language of the stars from the ground up.</p>
+          <ul class="feat-list mt-5" style="font-size:.94rem">
+            <li>Zodiac signs, houses &amp; planets</li>
+            <li>Reading a birth chart</li>
+            <li>Foundations of Vedic astrology</li>
+            <li>Beginner-friendly, no prior knowledge</li>
+          </ul>
+          <a class="btn btn-outline mt-6" href="contact.html">Enquire to Enrol</a>
+        </div>
+      </div>
+      <div class="course-card feature reveal">
+        <div class="cc-top"><span class="cc-tag">Popular</span><span class="lvl">Level 2</span><h3>Advanced ALP Astrology Training</h3></div>
+        <div class="cc-body">
+          <p style="color:var(--fg2)">Deepen your practice with predictive technique and serious chart analysis.</p>
+          <ul class="feat-list mt-5" style="font-size:.94rem">
+            <li>KP Astrology &amp; sub-lords</li>
+            <li>Dasha &amp; transit prediction</li>
+            <li>Divisional (Varga) charts</li>
+            <li>Compatibility &amp; timing of events</li>
+          </ul>
+          <a class="btn btn-primary mt-6" href="contact.html">Enquire to Enrol</a>
+        </div>
+      </div>
+      <div class="course-card reveal">
+        <div class="cc-top"><span class="lvl">Level 3</span><h3>Master's ALP Astrology Training</h3></div>
+        <div class="cc-body">
+          <p style="color:var(--fg2)">Become a confident, professional astrologer ready to consult and teach.</p>
+          <ul class="feat-list mt-5" style="font-size:.94rem">
+            <li>Advanced predictive frameworks</li>
+            <li>Remedial astrology &amp; rituals</li>
+            <li>Client consultation skills</li>
+            <li>Professional certification path</li>
+          </ul>
+          <a class="btn btn-outline mt-6" href="contact.html">Enquire to Enrol</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad" style="background:var(--bg-cream)">
+  <div class="wrap two-col media-after">
+    <div class="reveal">
+      <span class="eyebrow">What You'll Master</span>
+      <h2 class="mt-3">Systems we teach</h2>
+      <p class="lead mt-4">Every course is crafted to give you working, practical skill — not just theory.</p>
+      <ul class="feat-list mt-5">
+        <li>Vedic Astrology</li>
+        <li>KP Astrology</li>
+        <li>Prediction Analysis</li>
+        <li>Chart Interpretation</li>
+      </ul>
+      <a class="btn btn-red mt-6" href="contact.html">Talk to an Advisor</a>
+    </div>
+    <div class="media reveal">
+      <img src="https://www.alpastrology.org/static/media/photo3.cb6b1a8d110b94573c49.JPG" alt="Learning astrology" loading="lazy" decoding="async" onerror="this.closest('.media').classList.add('ph')">
+      <span class="ph-glyph">✦</span>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="wrap"><div class="cta-band reveal"><div class="stars" data-n="34"></div>
+    <div style="position:relative;z-index:1">
+      <h2>Start your astrology journey</h2>
+      <p class="lead mt-3">Speak with our team to pick the right level for you.</p>
+      <a class="btn btn-primary btn-lg mt-5" href="contact.html">Enquire Now</a>
+    </div>
+  </div></div>
+</section>
+
+<script src="site.js"></script>
+</body>
+</html>
