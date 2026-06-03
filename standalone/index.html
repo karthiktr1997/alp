@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ALP Astrology — Unlock the Secrets of Your Destiny</title>
+<meta name="description" content="Revealing fundamentals and navigating toward a brighter future. ALP Astrology blends traditional Vedic wisdom with modern interpretation — consultations, courses, events and more.">
+<meta name="ext-resource-dependency" content="assets/alp-logo.webp" data-resource-id="alpLogo" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://www.alpastrology.org">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* ---------- HERO (static background) ---------- */
+  .hero{ position:relative; overflow:hidden;
+    min-height:clamp(560px,84vh,820px);
+    display:grid; align-items:center;
+    padding-block:clamp(80px,10vh,120px); }
+  .hero-grid{ display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:clamp(32px,5vw,72px); align-items:center; }
+  .hero-copy{ max-width:580px; position:relative; z-index:2; }
+  .hero h1{ color:#fff; font-size:clamp(2rem,4vw,3.2rem); }
+  .hero h1 em{ font-style:normal;
+    background:linear-gradient(95deg,#F6D78A 0%,#E8C36B 45%,#F4A11C 110%);
+    -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .hero .lead{ color:var(--fg-inv-soft); max-width:52ch; margin-top:var(--sp-5); }
+  .hero-cta{ display:flex; gap:var(--sp-3); flex-wrap:wrap; margin-top:var(--sp-7); }
+  .hero-trust{ display:flex; gap:var(--sp-6); flex-wrap:wrap; margin-top:var(--sp-7);
+    color:var(--fg-inv-soft); font-size:.86rem; letter-spacing:.04em; }
+  .hero-trust b{ color:var(--cos-gold); font-family:var(--font-display); font-size:1.05rem; }
+  /* spacer column to keep the right-side focal (baked into the bg image) clear of copy on desktop */
+  .hero-spacer{ display:block; }
+
+  @media (max-width:880px){
+    .hero{ text-align:center; min-height:clamp(620px,90vh,760px); padding-block:clamp(64px,9vh,96px); }
+    .hero-grid{ grid-template-columns:1fr; gap:0; }
+    .hero-copy{ margin-inline:auto; }
+    .hero-cta, .hero-trust{ justify-content:center; }
+    .hero-spacer{ display:none; }
+  }
+
+  /* ---------- Who-we-are floating badge ---------- */
+  .whoimg .badge-float{ position:absolute; right:-18px; bottom:-18px; background:#fff; border-radius:var(--r-md);
+    padding:var(--sp-4) var(--sp-5); box-shadow:var(--shadow-lg); display:flex; align-items:center; gap:.8em;
+    border:1px solid var(--border); }
+  .badge-float .bf-i{ width:44px;height:44px;border-radius:12px;background:var(--grad-gold);display:grid;place-items:center;color:#fff; }
+  .badge-float b{ font-family:var(--font-display); font-size:1.1rem; color:var(--ink); display:block; line-height:1; }
+  .badge-float span{ font-size:.78rem; color:var(--fg2); }
+  @media (max-width:880px){ .whoimg .badge-float{ right:14px; bottom:14px; } }
+
+  .testimonial{ background:var(--bg-cream); }
+  .quote-card{ max-width:820px; margin-inline:auto; text-align:center; }
+  .quote-card .qmark{ font-family:var(--font-display); font-size:5rem; color:var(--saffron); line-height:.6; opacity:.5; }
+  .quote-card blockquote{ font-family:var(--font-serif); font-size:clamp(1.4rem,2.6vw,2rem); line-height:1.45;
+    color:var(--ink); font-style:italic; margin:var(--sp-4) 0 var(--sp-6); }
+  .quote-person{ display:flex; align-items:center; gap:.9em; justify-content:center; }
+  .quote-person img{ width:58px; height:58px; border-radius:50%; object-fit:cover; border:2px solid var(--saffron); }
+  .quote-person b{ font-family:var(--font-display); font-size:1.1rem; }
+  .quote-person span{ display:block; font-size:.85rem; color:var(--fg2); }
+
+  .contact-grid{ display:grid; grid-template-columns:1fr 1.1fr; gap:clamp(32px,5vw,64px); align-items:start; }
+  @media (max-width:880px){ .contact-grid{ grid-template-columns:1fr; } }
+  .contact-info{ display:flex; flex-direction:column; gap:var(--sp-5); }
+  .ci-item{ display:flex; gap:1em; align-items:flex-start; }
+  .ci-item .ci-i{ flex:none; width:48px; height:48px; border-radius:12px; background:var(--gold-tint);
+    color:var(--saffron-deep); display:grid; place-items:center; border:1px solid var(--border-strong); }
+  .ci-item h4{ font-family:var(--font-body); font-weight:700; font-size:.95rem; letter-spacing:.02em; margin-bottom:.15em; }
+  .ci-item p{ color:var(--fg2); font-size:.95rem; }
+  .contact-form{ background:#fff; border:1px solid var(--border); border-radius:var(--r-lg); padding:clamp(24px,4vw,40px); box-shadow:var(--shadow-md); }
+  .form-row{ display:grid; grid-template-columns:1fr 1fr; gap:var(--sp-4); }
+  @media (max-width:520px){ .form-row{ grid-template-columns:1fr; } }
+</style>
+<template id="__bundler_thumbnail" data-bg-color="#0A0E27">
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#0A0E27"/>
+  <circle cx="600" cy="340" r="140" fill="none" stroke="#E8C36B" stroke-width="2" stroke-dasharray="6 10" opacity=".5"/>
+  <circle cx="600" cy="340" r="100" fill="none" stroke="#E8C36B" stroke-width="1" opacity=".3"/>
+  <text x="600" y="360" text-anchor="middle" fill="#F4A11C" font-family="Georgia,serif" font-size="120" opacity=".85">✦</text>
+  <text x="600" y="520" text-anchor="middle" fill="#E8C36B" font-family="Poppins,sans-serif" font-weight="800" font-size="52" letter-spacing=".04em">ALP ASTROLOGY</text>
+  <text x="600" y="570" text-anchor="middle" fill="rgba(232,195,107,.5)" font-family="Helvetica,sans-serif" font-size="22" letter-spacing=".16em">UNLOCK THE SECRETS OF YOUR DESTINY</text>
+  <circle cx="200" cy="150" r="2" fill="#fff" opacity=".7"/>
+  <circle cx="950" cy="200" r="2.5" fill="#E8C36B" opacity=".6"/>
+  <circle cx="380" cy="680" r="1.8" fill="#fff" opacity=".5"/>
+  <circle cx="850" cy="600" r="2" fill="#fff" opacity=".6"/>
+  <circle cx="100" cy="500" r="1.5" fill="#E8C36B" opacity=".4"/>
+  <circle cx="1080" cy="400" r="1.8" fill="#fff" opacity=".5"/>
+</svg>
+</template>
+</head>
+<body data-page="home">
+
+<!-- ============ HERO ============ -->
+<section class="hero" data-screen-label="Hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow" style="color:var(--cos-gold)">Traditional Vedic Wisdom · Modern Insight</span>
+      <h1 class="mt-4">Unlock the Secrets of Your <em>Destiny</em> with ALP Astrology</h1>
+      <p class="lead">Experience the perfect blend of traditional Vedic wisdom and modern interpretation — guidance that brings clarity, self-discovery and positive transformation.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary btn-lg" href="consultation.html">Book a Consultation</a>
+        <a class="btn btn-ghost-light btn-lg" href="courses.html">Join Our Courses</a>
+      </div>
+      <div class="hero-trust">
+        <span><b>Vedic + KP</b><br>Predictive Systems</span>
+        <span><b>3 Levels</b><br>Structured Courses</span>
+        <span><b>1-to-1</b><br>Personal Guidance</span>
+      </div>
+    </div>
+    <div class="hero-spacer" aria-hidden="true"></div>
+  </div>
+</section>
+
+<div class="glyph-divider">✦ ✧ ✦ ✧ ✦ ✧</div>
+
+<!-- ============ WHO WE ARE ============ -->
+<section class="section-pad" data-screen-label="Who We Are">
+  <div class="wrap two-col">
+    <div class="media whoimg reveal" style="position:relative">
+      <img src="https://www.alpastrology.org/static/media/photo2.222e9ecb6244621582a1.JPG" alt="Astrology chart and cosmic elements" loading="lazy" decoding="async" onerror="this.closest('.media').classList.add('ph')">
+      <span class="ph-glyph">✦</span>
+      <div class="badge-float">
+        <span class="bf-i"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18" stroke-width="1.4"/></svg></span>
+        <span><b>Vision</b><span>An astrologer in every home</span></span>
+      </div>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Who We Are</span>
+      <h2 class="mt-3">Guidance rooted in wisdom, shaped for today</h2>
+      <p class="lead mt-4">At <strong>ALP Astrology</strong>, we empower individuals with deep, meaningful insights by blending traditional astrology with modern psychological understanding. Our vision is a future where every home has access to a skilled ALP astrologer — making astrology a structured and trusted part of personal growth.</p>
+      <p class="mt-4" style="color:var(--fg2)">We strive to bring clarity, self-discovery and positive transformation through the wisdom of the stars.</p>
+      <a class="btn btn-outline mt-6" href="about.html">Learn More About Us →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COURSES ============ -->
+<section class="section-pad" style="background:var(--bg-cream)" data-screen-label="Courses">
+  <div class="wrap two-col media-after">
+    <div class="reveal">
+      <span class="eyebrow">Courses</span>
+      <h2 class="mt-3">Learn Astrology from the Experts</h2>
+      <p class="lead mt-4">Begin your ALP Astrology journey with structured, easy-to-understand training programs for beginners, advancing learners and aspiring professionals. Each course builds strong foundations, deepens your knowledge and masters advanced predictive techniques.</p>
+      <ul class="feat-list mt-5">
+        <li>The Basic ALP Astrology Training Course</li>
+        <li>The Advanced ALP Astrology Training Course</li>
+        <li>The Master's ALP Astrology Training Course</li>
+      </ul>
+      <a class="btn btn-primary mt-6" href="courses.html">Explore Our Courses</a>
+    </div>
+    <div class="media reveal">
+      <img src="https://www.alpastrology.org/static/media/photo3.cb6b1a8d110b94573c49.JPG" alt="Learning astrology" loading="lazy" decoding="async" onerror="this.closest('.media').classList.add('ph')">
+      <span class="ph-glyph">✦</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONSULTATION ============ -->
+<section class="section-pad" data-screen-label="Consultation">
+  <div class="wrap two-col">
+    <div class="media reveal">
+      <img src="https://www.alpastrology.org/static/media/photo6.47a104c6600c6d047d48.JPG" alt="Astrological consultation" loading="lazy" decoding="async" onerror="this.closest('.media').classList.add('ph')">
+      <span class="ph-glyph">✦</span>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Consultation</span>
+      <h2 class="mt-3">Astrology crafted for your unique journey</h2>
+      <p class="lead mt-4">Every individual's path is different. Our expert consultations guide you through life's twists and turns with clarity, confidence and positive direction.</p>
+      <ul class="feat-list mt-5">
+        <li>Personal Birth Chart Insights</li>
+        <li>Career &amp; Financial Growth Advice</li>
+        <li>Marriage &amp; Relationship Compatibility</li>
+        <li>Health &amp; Life-Path Healing Solutions</li>
+      </ul>
+      <a class="btn btn-red mt-6" href="consultation.html">Book Your Consultation Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="section-pad" data-screen-label="Services">
+  <div class="wrap">
+    <div class="center reveal" style="max-width:60ch;margin-inline:auto">
+      <span class="eyebrow">Services &amp; Offerings</span>
+      <h2 class="mt-3">Our Services &amp; Offerings</h2>
+      <p class="lead mt-4">Discover comprehensive astrological solutions tailored to your journey.</p>
+    </div>
+    <div class="card-grid c4 mt-6">
+      <div class="s-card reveal">
+        <div class="s-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4"/></svg></div>
+        <h3>Consultation</h3>
+        <p>Professional consultation providing detailed chart analysis and practical guidance.</p>
+        <ul class="feat-list mt-4" style="font-size:.9rem">
+          <li>Birth Chart Analysis</li><li>Career &amp; Financial Guidance</li><li>Marriage &amp; Compatibility</li><li>Health &amp; Wellness Remedies</li>
+        </ul>
+        <a class="btn btn-outline mt-5" href="consultation.html">Learn More</a>
+      </div>
+      <div class="s-card reveal">
+        <div class="s-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h12a3 3 0 0 1 3 3v11a2.5 2.5 0 0 0-2.5-2.5H4z"/><path d="M4 5a2.5 2.5 0 0 0-2.5 2.5V19a2.5 2.5 0 0 1 2.5-2.5"/></svg></div>
+        <h3>Courses</h3>
+        <p>Professionally structured courses for beginners, intermediate learners and professionals.</p>
+        <ul class="feat-list mt-4" style="font-size:.9rem">
+          <li>Vedic Astrology</li><li>KP Astrology</li><li>Prediction Analysis</li><li>Chart Interpretation</li>
+        </ul>
+        <a class="btn btn-outline mt-5" href="courses.html">Learn More</a>
+      </div>
+      <div class="s-card reveal">
+        <div class="s-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M7 9l2 2-2 2M12 13h4" stroke-width="1.6"/></svg></div>
+        <h3>Software</h3>
+        <p>Advanced astrology software built for accuracy and professional chart analysis.</p>
+        <ul class="feat-list mt-4" style="font-size:.9rem">
+          <li>Professional Tools</li><li>Predictive Models</li><li>Divisional Charts</li><li>Planetary Calculations</li>
+        </ul>
+        <a class="btn btn-outline mt-5" href="services.html">Learn More</a>
+      </div>
+      <div class="s-card reveal">
+        <div class="s-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+        <h3>Books</h3>
+        <p>Comprehensive astrology books offering clear concepts and practical application.</p>
+        <ul class="feat-list mt-4" style="font-size:.9rem">
+          <li>Simplified Concepts</li><li>Practical Examples</li><li>Expert Authors</li><li>Deep Understanding</li>
+        </ul>
+        <a class="btn btn-outline mt-5" href="services.html">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section style="background:var(--grad-night);color:var(--fg-inv);position:relative;overflow:hidden" data-screen-label="Stats">
+  <div class="stars" data-n="40"></div>
+  <div class="wrap section-pad" style="position:relative;z-index:1">
+    <div class="stat-row">
+      <div class="stat reveal"><b data-count="500" data-suffix="+">0+</b><span style="color:var(--fg-inv-soft)">Clients</span></div>
+      <div class="stat reveal"><b data-count="250" data-suffix="+">0</b><span style="color:var(--fg-inv-soft)">Star Reviews</span></div>
+      <div class="stat reveal"><b data-count="15" data-suffix="+">0+</b><span style="color:var(--fg-inv-soft)">Years Experience</span></div>
+      <div class="stat reveal"><b data-count="20" data-suffix="+">0+</b><span style="color:var(--fg-inv-soft)">Services</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIAL ============ -->
+<section class="section-pad testimonial" data-screen-label="Testimonial">
+  <div class="wrap">
+    <div class="center reveal" style="margin-bottom:var(--sp-6)">
+      <span class="eyebrow">Testimonials</span>
+      <h2 class="mt-3">What Our Clients Say</h2>
+      <p class="lead mt-3">Hear from those who've found clarity and guidance through our services.</p>
+      <div style="display:inline-flex;align-items:center;gap:.6em;margin-top:var(--sp-4);background:#fff;border:1px solid var(--border-strong);padding:.5em 1.05em;border-radius:var(--r-pill);box-shadow:var(--shadow-xs)">
+        <span style="color:var(--saffron);letter-spacing:.1em">★★★★★</span>
+        <span style="font-weight:800;color:var(--ink)">4.7</span>
+        <span style="color:var(--fg2);font-size:.9rem">· 286+ Google reviews</span>
+      </div>
+    </div>
+    <div class="quote-card reveal">
+      <div class="qmark">“</div>
+      <blockquote>ALP Astrology is excellent! The team has deep knowledge about astrology and spirituality. They answer all my questions clearly, and I feel genuinely guided in my life. The atmosphere is warm and welcoming.</blockquote>
+      <div class="quote-person">
+        <span style="width:58px;height:58px;border-radius:50%;background:var(--grad-gold);color:#fff;display:grid;place-items:center;font-family:var(--font-display);font-size:1.5rem;border:2px solid var(--saffron)">G</span>
+        <span><b>Verified Google Review</b><span>ALP Astrology · Moulivakkam, Chennai</span></span>
+      </div>
+      <a class="btn btn-outline mt-6" href="testimonials.html">Read More Stories →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section-pad" data-screen-label="Contact">
+  <div class="wrap">
+    <div class="center reveal" style="margin-bottom:var(--sp-7);max-width:60ch;margin-inline:auto">
+      <span class="eyebrow">Contact</span>
+      <h2 class="mt-3">Get in Touch with ALP Astrology</h2>
+      <p class="lead mt-3">Have a question or need personalized guidance? Reach out to our support team today.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="ci-item">
+          <span class="ci-i"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+          <div><h4>Email</h4><p>alpastrology@gmail.com<br>alpastrologyoffice@gmail.com</p></div>
+        </div>
+        <div class="ci-item">
+          <span class="ci-i"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+          <div><h4>Phone</h4><p>+91 9786556156</p></div>
+        </div>
+        <div class="ci-item">
+          <span class="ci-i"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <div><h4>Location</h4><p>F2, 1st Floor, Shiva Homes, Jayalakshmi Nagar, Anandha Sayanam, Moulivakkam, Chennai, Tamil Nadu, India — 600116</p></div>
+        </div>
+        <a class="btn btn-red mt-3" href="https://wa.me/919786556156" target="_blank" rel="noopener" style="align-self:flex-start">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Chat on WhatsApp
+        </a>
+      </div>
+      <form class="contact-form reveal" onsubmit="event.preventDefault();this.querySelector('.send-btn').textContent='Sent ✦ We\'ll be in touch';this.querySelector('.send-btn').disabled=true;">
+        <div class="form-row">
+          <div class="field"><label>Full Name</label><input type="text" placeholder="Your name" required></div>
+          <div class="field"><label>Email Address</label><input type="email" placeholder="you@email.com" required></div>
+        </div>
+        <div class="field"><label>Phone Number</label><input type="tel" placeholder="+91 ..."></div>
+        <div class="field"><label>Message</label><textarea placeholder="How can we help you?" required></textarea></div>
+        <button class="btn btn-primary btn-lg send-btn" type="submit" style="width:100%;justify-content:center">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script src="site.js"></script>
+</body>
+</html>
+
+<style id="__om-edit-overrides">
+[aria-label="Primary"] >.btn { height: 45px !important }
+[aria-label="Primary"] >.btn { width: 220px !important }
+</style>
