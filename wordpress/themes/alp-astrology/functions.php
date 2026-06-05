@@ -5,6 +5,8 @@ define( 'ALP_VERSION', '1.0.0' );
 define( 'ALP_DIR', get_template_directory() );
 define( 'ALP_URL', get_template_directory_uri() );
 
+require_once ALP_DIR . '/inc/cpt.php';
+
 /* ── Theme supports ──────────────────────────────────────── */
 add_action( 'after_setup_theme', function () {
     add_theme_support( 'title-tag' );
@@ -38,6 +40,8 @@ add_action( 'wp_enqueue_scripts', function () {
     );
     // Main stylesheet (style.css = theme declaration + all CSS)
     wp_enqueue_style( 'alp-main', get_stylesheet_uri(), [ 'alp-google-fonts' ], ALP_VERSION );
+    // Pages CSS
+    wp_enqueue_style( 'alp-pages', ALP_URL . '/assets/css/pages.css', [ 'alp-main' ], ALP_VERSION );
     // Main JS
     wp_enqueue_script( 'alp-main', ALP_URL . '/assets/js/alp-main.js', [], ALP_VERSION, true );
     // Pass data to JS
@@ -163,6 +167,7 @@ add_action( 'after_setup_theme', function () {
     add_image_size( 'alp-card',        600,  450,  true );
     add_image_size( 'alp-thumb',       400,  300,  true );
     add_image_size( 'alp-avatar',      120,  120,  true );
+    add_image_size( 'alp-zodiac',      600,  600,  true );
 } );
 
 /* ── WooCommerce support (optional) ──────────────────────── */
