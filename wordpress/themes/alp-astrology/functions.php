@@ -133,9 +133,21 @@ add_action( 'elementor/init', function () {
     if ( ! class_exists( '\Elementor\Plugin' ) ) return;
 } );
 
-/* ── Add Elementor page template ─────────────────────────── */
+/* ── Register all page templates ─────────────────────────── */
 add_filter( 'theme_page_templates', function ( $templates ) {
-    $templates['templates/elementor-full.php'] = __( 'Elementor Full Width', 'alp-astrology' );
+    $templates['templates/elementor-full.php']          = __( 'Elementor Full Width', 'alp-astrology' );
+    $templates['templates/template-about.php']          = __( 'About', 'alp-astrology' );
+    $templates['templates/template-courses.php']        = __( 'Courses', 'alp-astrology' );
+    $templates['templates/template-consultation.php']   = __( 'Consultation', 'alp-astrology' );
+    $templates['templates/template-services.php']       = __( 'Services', 'alp-astrology' );
+    $templates['templates/template-contact.php']        = __( 'Contact', 'alp-astrology' );
+    $templates['templates/template-articles.php']       = __( 'Articles', 'alp-astrology' );
+    $templates['templates/template-events.php']         = __( 'Events', 'alp-astrology' );
+    $templates['templates/template-faq.php']            = __( 'FAQ', 'alp-astrology' );
+    $templates['templates/template-testimonials.php']   = __( 'Testimonials', 'alp-astrology' );
+    $templates['templates/template-success-stories.php'] = __( 'Success Stories', 'alp-astrology' );
+    $templates['templates/template-videos.php']         = __( 'Videos', 'alp-astrology' );
+    $templates['templates/template-horoscope.php']      = __( 'Horoscope', 'alp-astrology' );
     return $templates;
 } );
 

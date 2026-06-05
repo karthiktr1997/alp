@@ -160,74 +160,74 @@ function alp_setup_run() {
         [
             'title'    => 'About',
             'slug'     => 'about',
-            'template' => 'templates/elementor-full.php',
-            'content'  => '<!-- Elementor -->',
+            'template' => 'templates/template-about.php',
+            'content'  => '',
         ],
         [
             'title'    => 'Courses',
             'slug'     => 'courses',
-            'template' => 'templates/elementor-full.php',
-            'content'  => '<!-- Elementor -->',
+            'template' => 'templates/template-courses.php',
+            'content'  => '',
         ],
         [
             'title'    => 'Consultation',
             'slug'     => 'consultation',
-            'template' => 'templates/elementor-full.php',
-            'content'  => '<!-- Elementor -->',
+            'template' => 'templates/template-consultation.php',
+            'content'  => '',
         ],
         [
             'title'    => 'Services',
             'slug'     => 'services',
-            'template' => 'templates/elementor-full.php',
-            'content'  => '<!-- Elementor -->',
+            'template' => 'templates/template-services.php',
+            'content'  => '',
         ],
         [
             'title'    => 'Contact',
             'slug'     => 'contact',
-            'template' => 'templates/elementor-full.php',
-            'content'  => '<!-- Elementor -->',
+            'template' => 'templates/template-contact.php',
+            'content'  => '',
         ],
         [
             'title'    => 'Horoscope',
             'slug'     => 'horoscope',
-            'template' => 'templates/elementor-full.php',
-            'content'  => '<!-- Elementor -->',
+            'template' => 'templates/template-horoscope.php',
+            'content'  => '',
         ],
         [
             'title'    => 'Articles',
             'slug'     => 'articles',
-            'template' => 'templates/elementor-full.php',
-            'content'  => '<!-- Elementor -->',
+            'template' => 'templates/template-articles.php',
+            'content'  => '',
         ],
         [
             'title'    => 'Videos',
             'slug'     => 'videos',
-            'template' => 'templates/elementor-full.php',
-            'content'  => '<!-- Elementor -->',
+            'template' => 'templates/template-videos.php',
+            'content'  => '',
         ],
         [
             'title'    => 'Events',
             'slug'     => 'events',
-            'template' => 'templates/elementor-full.php',
-            'content'  => '<!-- Elementor -->',
+            'template' => 'templates/template-events.php',
+            'content'  => '',
         ],
         [
             'title'    => 'Testimonials',
             'slug'     => 'testimonials',
-            'template' => 'templates/elementor-full.php',
-            'content'  => '<!-- Elementor -->',
+            'template' => 'templates/template-testimonials.php',
+            'content'  => '',
         ],
         [
             'title'    => 'FAQ',
             'slug'     => 'faq',
-            'template' => 'templates/elementor-full.php',
-            'content'  => '<!-- Elementor -->',
+            'template' => 'templates/template-faq.php',
+            'content'  => '',
         ],
         [
             'title'    => 'Success Stories',
             'slug'     => 'success-stories',
-            'template' => 'templates/elementor-full.php',
-            'content'  => '<!-- Elementor -->',
+            'template' => 'templates/template-success-stories.php',
+            'content'  => '',
         ],
         [
             'title'    => 'Privacy Policy',
@@ -287,6 +287,9 @@ function alp_setup_run() {
     /* ── Elementor global colors (kit) ── */
     alp_setup_register_elementor_colors();
 
+    /* ── Zodiac CPT posts ── */
+    alp_setup_create_zodiac_posts();
+
     /* ── Flush rewrite rules ── */
     flush_rewrite_rules();
 
@@ -297,6 +300,229 @@ function alp_setup_run() {
     );
 
     return [ 'success' => true, 'message' => $message ];
+}
+
+/* ══════════════════════════════════════════════════════════
+   CREATE ZODIAC CPT POSTS
+══════════════════════════════════════════════════════════ */
+function alp_setup_create_zodiac_posts() {
+    $signs = [
+        [
+            'title'     => 'Aries',
+            'slug'      => 'aries',
+            'glyph'     => '♈︎',
+            'dates'     => 'Mar 21–Apr 19',
+            'element'   => 'Fire',
+            'planet'    => 'Mars',
+            'quality'   => 'Cardinal',
+            'desc'      => 'Bold pioneering and full of initiative — Aries charges at life head-first',
+            'strengths' => "Courageous & driven\nNatural leader\nHonest & direct\nEnergetic initiator",
+            'growth'    => "Can be impatient\nQuick to anger\nActs before thinking",
+            'prev'      => 'pisces',
+            'next'      => 'taurus',
+            'banner'    => 'aries',
+        ],
+        [
+            'title'     => 'Taurus',
+            'slug'      => 'taurus',
+            'glyph'     => '♉︎',
+            'dates'     => 'Apr 20–May 20',
+            'element'   => 'Earth',
+            'planet'    => 'Venus',
+            'quality'   => 'Fixed',
+            'desc'      => 'Patient, determined and deeply sensual — Taurus builds with care and cherishes the fruits of steady effort',
+            'strengths' => "Dependable & patient\nLoyal & devoted\nPractical & resourceful\nAppreciation for beauty",
+            'growth'    => "Can be stubborn\nResistant to change\nPossessive tendencies",
+            'prev'      => 'aries',
+            'next'      => 'gemini',
+            'banner'    => 'taurus',
+        ],
+        [
+            'title'     => 'Gemini',
+            'slug'      => 'gemini',
+            'glyph'     => '♊︎',
+            'dates'     => 'May 21–Jun 20',
+            'element'   => 'Air',
+            'planet'    => 'Mercury',
+            'quality'   => 'Mutable',
+            'desc'      => 'Quick-minded and endlessly curious — Gemini thrives on communication ideas and connecting worlds',
+            'strengths' => "Adaptable & versatile\nIntellectually curious\nWitty communicator\nQuick learner",
+            'growth'    => "Can be inconsistent\nProne to overthinking\nDifficulty deciding",
+            'prev'      => 'taurus',
+            'next'      => 'cancer',
+            'banner'    => 'gemini',
+        ],
+        [
+            'title'     => 'Cancer',
+            'slug'      => 'cancer',
+            'glyph'     => '♋︎',
+            'dates'     => 'Jun 21–Jul 22',
+            'element'   => 'Water',
+            'planet'    => 'Moon',
+            'quality'   => 'Cardinal',
+            'desc'      => 'Tender perceptive and fiercely protective — Cancer flows between intuition and emotion guided by the Moon',
+            'strengths' => "Deeply intuitive\nNurturing & caring\nLoyal to loved ones\nEmotionally intelligent",
+            'growth'    => "Can be overly sensitive\nProne to moodiness\nHolds on too tightly",
+            'prev'      => 'gemini',
+            'next'      => 'leo',
+            'banner'    => 'cancer',
+        ],
+        [
+            'title'     => 'Leo',
+            'slug'      => 'leo',
+            'glyph'     => '♌︎',
+            'dates'     => 'Jul 23–Aug 22',
+            'element'   => 'Fire',
+            'planet'    => 'Sun',
+            'quality'   => 'Fixed',
+            'desc'      => 'Radiant bold and generous — Leo commands the stage with heart and fire burning bright as the Sun itself',
+            'strengths' => "Natural performer\nGenerous & warm-hearted\nConfident leader\nCreative & dramatic",
+            'growth'    => "Can be prideful\nNeeds constant validation\nDomineering at times",
+            'prev'      => 'cancer',
+            'next'      => 'virgo',
+            'banner'    => 'leo',
+        ],
+        [
+            'title'     => 'Virgo',
+            'slug'      => 'virgo',
+            'glyph'     => '♍︎',
+            'dates'     => 'Aug 23–Sep 22',
+            'element'   => 'Earth',
+            'planet'    => 'Mercury',
+            'quality'   => 'Mutable',
+            'desc'      => 'Discerning diligent and devoted to craft — Virgo finds meaning in mastery and the art of refinement',
+            'strengths' => "Detail-oriented & precise\nAnalytical & methodical\nHelpful & reliable\nStrong work ethic",
+            'growth'    => "Tendency toward perfectionism\nOverly self-critical\nCan be overcautious",
+            'prev'      => 'leo',
+            'next'      => 'libra',
+            'banner'    => 'virgo',
+        ],
+        [
+            'title'     => 'Libra',
+            'slug'      => 'libra',
+            'glyph'     => '♎︎',
+            'dates'     => 'Sep 23–Oct 22',
+            'element'   => 'Air',
+            'planet'    => 'Venus',
+            'quality'   => 'Cardinal',
+            'desc'      => 'Graceful balanced and ever seeking harmony — Libra weighs all sides and chooses the beautiful middle path',
+            'strengths' => "Diplomatic & fair\nStrong sense of justice\nCharming & sociable\nArtistic sensibility",
+            'growth'    => "Indecisive at times\nAvoids confrontation\nPeople-pleasing tendency",
+            'prev'      => 'virgo',
+            'next'      => 'scorpio',
+            'banner'    => 'libra',
+        ],
+        [
+            'title'     => 'Scorpio',
+            'slug'      => 'scorpio',
+            'glyph'     => '♏︎',
+            'dates'     => 'Oct 23–Nov 21',
+            'element'   => 'Water',
+            'planet'    => 'Mars/Pluto',
+            'quality'   => 'Fixed',
+            'desc'      => 'Mysterious powerful and transformative — Scorpio dives deep into the unseen and emerges forever changed',
+            'strengths' => "Intensely passionate\nPerceptive & resourceful\nMagnetic presence\nFiercely loyal",
+            'growth'    => "Can be secretive\nProne to jealousy\nDifficulty trusting",
+            'prev'      => 'libra',
+            'next'      => 'sagittarius',
+            'banner'    => 'scorpio',
+        ],
+        [
+            'title'     => 'Sagittarius',
+            'slug'      => 'sagittarius',
+            'glyph'     => '♐︎',
+            'dates'     => 'Nov 22–Dec 21',
+            'element'   => 'Fire',
+            'planet'    => 'Jupiter',
+            'quality'   => 'Mutable',
+            'desc'      => 'Boundless optimistic and forever seeking truth — Sagittarius aims its arrow at the horizon and rides towards wisdom',
+            'strengths' => "Optimistic & adventurous\nPhilosophical thinker\nHonest & direct\nLove of freedom",
+            'growth'    => "Can be restless\nOverconfident at times\nBlunt to a fault",
+            'prev'      => 'scorpio',
+            'next'      => 'capricorn',
+            'banner'    => 'sagittarius',
+        ],
+        [
+            'title'     => 'Capricorn',
+            'slug'      => 'capricorn',
+            'glyph'     => '♑︎',
+            'dates'     => 'Dec 22–Jan 19',
+            'element'   => 'Earth',
+            'planet'    => 'Saturn',
+            'quality'   => 'Cardinal',
+            'desc'      => 'Steadfast ambitious and built for the long climb — Capricorn scales the mountain of achievement one sure step at a time',
+            'strengths' => "Disciplined & ambitious\nResponsible & reliable\nPatient & persistent\nStrategic thinker",
+            'growth'    => "Can be overly serious\nWorkaholic tendencies\nEmotionally guarded",
+            'prev'      => 'sagittarius',
+            'next'      => 'aquarius',
+            'banner'    => 'capricorn',
+        ],
+        [
+            'title'     => 'Aquarius',
+            'slug'      => 'aquarius',
+            'glyph'     => '♒︎',
+            'dates'     => 'Jan 20–Feb 18',
+            'element'   => 'Air',
+            'planet'    => 'Uranus/Saturn',
+            'quality'   => 'Fixed',
+            'desc'      => 'Visionary unconventional and ahead of its time — Aquarius carries the waters of knowledge to nourish the collective',
+            'strengths' => "Progressive & original\nHumanitarian at heart\nIntellectually independent\nVisionary thinking",
+            'growth'    => "Can be detached emotionally\nStubborn in ideals\nUnpredictable",
+            'prev'      => 'capricorn',
+            'next'      => 'pisces',
+            'banner'    => 'aquarius',
+        ],
+        [
+            'title'     => 'Pisces',
+            'slug'      => 'pisces',
+            'glyph'     => '♓︎',
+            'dates'     => 'Feb 19–Mar 20',
+            'element'   => 'Water',
+            'planet'    => 'Neptune/Jupiter',
+            'quality'   => 'Mutable',
+            'desc'      => 'Dreamy compassionate and boundlessly imaginative — Pisces swims between worlds merging intuition with the infinite',
+            'strengths' => "Compassionate & empathetic\nDeeply creative\nIntuitive & spiritual\nAdaptable & gentle",
+            'growth'    => "Can be escapist\nOverly idealistic\nBoundary challenges",
+            'prev'      => 'aquarius',
+            'next'      => 'aries',
+            'banner'    => 'pisces',
+        ],
+    ];
+
+    foreach ( $signs as $sign ) {
+        // Check if already exists.
+        $existing = get_posts( [
+            'post_type'      => 'alp_zodiac',
+            'name'           => $sign['slug'],
+            'posts_per_page' => 1,
+            'post_status'    => 'publish',
+        ] );
+        if ( ! empty( $existing ) ) {
+            continue;
+        }
+
+        $post_id = wp_insert_post( [
+            'post_title'   => $sign['title'],
+            'post_name'    => $sign['slug'],
+            'post_type'    => 'alp_zodiac',
+            'post_status'  => 'publish',
+            'post_content' => '',
+        ] );
+
+        if ( $post_id && ! is_wp_error( $post_id ) ) {
+            update_post_meta( $post_id, 'alp_zodiac_glyph',     $sign['glyph'] );
+            update_post_meta( $post_id, 'alp_zodiac_dates',     $sign['dates'] );
+            update_post_meta( $post_id, 'alp_zodiac_element',   $sign['element'] );
+            update_post_meta( $post_id, 'alp_zodiac_planet',    $sign['planet'] );
+            update_post_meta( $post_id, 'alp_zodiac_quality',   $sign['quality'] );
+            update_post_meta( $post_id, 'alp_zodiac_desc',      $sign['desc'] );
+            update_post_meta( $post_id, 'alp_zodiac_strengths', $sign['strengths'] );
+            update_post_meta( $post_id, 'alp_zodiac_growth',    $sign['growth'] );
+            update_post_meta( $post_id, 'alp_zodiac_prev_sign', $sign['prev'] );
+            update_post_meta( $post_id, 'alp_zodiac_next_sign', $sign['next'] );
+            update_post_meta( $post_id, 'alp_zodiac_banner',    $sign['banner'] );
+        }
+    }
 }
 
 /* ══════════════════════════════════════════════════════════
