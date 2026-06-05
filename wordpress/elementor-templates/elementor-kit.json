@@ -1,0 +1,193 @@
+{
+  "version": "0.4",
+  "title": "ALP Astrology Kit",
+  "type": "kit",
+  "content": [],
+  "page_settings": {
+    "system_colors": [
+      {
+        "_id": "primary",
+        "title": "Primary",
+        "color": "#F4A11C"
+      },
+      {
+        "_id": "secondary",
+        "title": "Secondary",
+        "color": "#E11D17"
+      },
+      {
+        "_id": "text",
+        "title": "Text",
+        "color": "#1C1813"
+      },
+      {
+        "_id": "accent",
+        "title": "Accent",
+        "color": "#F6B53C"
+      },
+      {
+        "_id": "alp-gold",
+        "title": "ALP Gold",
+        "color": "#F4A11C"
+      },
+      {
+        "_id": "alp-red",
+        "title": "ALP Red",
+        "color": "#E11D17"
+      },
+      {
+        "_id": "alp-ink",
+        "title": "ALP Ink",
+        "color": "#1C1813"
+      },
+      {
+        "_id": "alp-cream",
+        "title": "ALP Cream",
+        "color": "#FFFCF6"
+      },
+      {
+        "_id": "alp-bg-cream",
+        "title": "ALP Bg Cream",
+        "color": "#FBF4E7"
+      },
+      {
+        "_id": "alp-navy",
+        "title": "Cosmic Navy",
+        "color": "#0A0E27"
+      },
+      {
+        "_id": "alp-amber",
+        "title": "ALP Amber",
+        "color": "#F6B53C"
+      },
+      {
+        "_id": "alp-saffron-deep",
+        "title": "Saffron Deep",
+        "color": "#E07A12"
+      },
+      {
+        "_id": "alp-cos-gold",
+        "title": "Cosmic Gold",
+        "color": "#E8C36B"
+      },
+      {
+        "_id": "alp-gold-pale",
+        "title": "Gold Pale",
+        "color": "#FBE6C4"
+      },
+      {
+        "_id": "alp-red-deep",
+        "title": "ALP Red Deep",
+        "color": "#BC1411"
+      },
+      {
+        "_id": "alp-ink-soft",
+        "title": "Ink Soft",
+        "color": "#3A3329"
+      }
+    ],
+    "system_typography": [
+      {
+        "_id": "primary",
+        "title": "Primary",
+        "typography_typography": "custom",
+        "typography_font_family": "Poppins",
+        "typography_font_weight": "700"
+      },
+      {
+        "_id": "secondary",
+        "title": "Secondary",
+        "typography_typography": "custom",
+        "typography_font_family": "Cormorant Garamond",
+        "typography_font_weight": "500",
+        "typography_font_style": "italic"
+      },
+      {
+        "_id": "text",
+        "title": "Text",
+        "typography_typography": "custom",
+        "typography_font_family": "Helvetica Neue",
+        "typography_font_weight": "400"
+      },
+      {
+        "_id": "accent",
+        "title": "Accent",
+        "typography_typography": "custom",
+        "typography_font_family": "Poppins",
+        "typography_font_weight": "600",
+        "typography_text_transform": "uppercase",
+        "typography_letter_spacing": { "unit": "em", "size": 0.22 }
+      },
+      {
+        "_id": "alp-display",
+        "title": "ALP Display (H1)",
+        "typography_typography": "custom",
+        "typography_font_family": "Poppins",
+        "typography_font_weight": "800",
+        "typography_font_size": { "unit": "px", "size": 52 },
+        "typography_line_height": { "unit": "em", "size": 1.14 },
+        "typography_letter_spacing": { "unit": "em", "size": -0.02 }
+      },
+      {
+        "_id": "alp-heading",
+        "title": "ALP Heading (H2)",
+        "typography_typography": "custom",
+        "typography_font_family": "Poppins",
+        "typography_font_weight": "700",
+        "typography_font_size": { "unit": "px", "size": 42 },
+        "typography_line_height": { "unit": "em", "size": 1.14 },
+        "typography_letter_spacing": { "unit": "em", "size": -0.02 }
+      },
+      {
+        "_id": "alp-subheading",
+        "title": "ALP Subheading (H3)",
+        "typography_typography": "custom",
+        "typography_font_family": "Poppins",
+        "typography_font_weight": "700",
+        "typography_font_size": { "unit": "px", "size": 24 },
+        "typography_line_height": { "unit": "em", "size": 1.3 }
+      },
+      {
+        "_id": "alp-body",
+        "title": "ALP Body",
+        "typography_typography": "custom",
+        "typography_font_family": "Helvetica Neue",
+        "typography_font_weight": "400",
+        "typography_font_size": { "unit": "px", "size": 17 },
+        "typography_line_height": { "unit": "em", "size": 1.58 }
+      },
+      {
+        "_id": "alp-eyebrow",
+        "title": "ALP Eyebrow",
+        "typography_typography": "custom",
+        "typography_font_family": "Helvetica Neue",
+        "typography_font_weight": "700",
+        "typography_font_size": { "unit": "rem", "size": 0.78 },
+        "typography_text_transform": "uppercase",
+        "typography_letter_spacing": { "unit": "em", "size": 0.22 }
+      }
+    ],
+    "default_generic_fonts": "Helvetica Neue, Helvetica, Arial, sans-serif",
+    "body_color": "#1C1813",
+    "link_normal_color": "#1C1813",
+    "link_hover_color": "#E07A12",
+    "h1_color": "#1C1813",
+    "h2_color": "#1C1813",
+    "h3_color": "#1C1813",
+    "h4_color": "#1C1813",
+    "h5_color": "#1C1813",
+    "h6_color": "#1C1813",
+    "button_typography_typography": "custom",
+    "button_typography_font_family": "Poppins",
+    "button_typography_font_weight": "700",
+    "button_typography_font_size": { "unit": "rem", "size": 0.97 },
+    "button_text_color": "#FFFFFF",
+    "button_background_color": "#F4A11C",
+    "button_border_radius": { "unit": "px", "top": "999", "right": "999", "bottom": "999", "left": "999", "isLinked": true },
+    "button_padding": { "unit": "em", "top": "0.85", "right": "1.6", "bottom": "0.85", "left": "1.6", "isLinked": false },
+    "button_hover_color": "#FFFFFF",
+    "button_background_hover_color": "#E07A12",
+    "container_width": { "unit": "px", "size": 1200 },
+    "space_between_widgets": { "unit": "px", "size": 0 }
+  }
+}
