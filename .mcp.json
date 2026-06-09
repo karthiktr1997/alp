@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "novamira-demo-digitalseva": {
+      "command": "npx",
+      "args": ["-y", "@automattic/mcp-wordpress-remote@latest"],
+      "env": {
+        "WP_API_URL": "https://demo.digitalsevagan.com/wp-json/mcp/novamira",
+        "WP_API_USERNAME": "admin",
+        "WP_API_PASSWORD": "cJU31rNNk0B4v8a5QRKrkrFB"
+      }
+    }
+  }
+}
